@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'abdimas');
+require_once __DIR__."../../../koneksi.php";
 
 // function query($query){
 //     global $conn; 
