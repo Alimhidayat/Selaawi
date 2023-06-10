@@ -49,6 +49,7 @@ if (isset($_POST['cari'])) {
     <?php
     require_once "sidebar/sidebar.css";
     ?>
+    
     .logo {
 		margin-top: 20px;
       height: 100px;

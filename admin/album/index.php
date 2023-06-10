@@ -63,25 +63,25 @@ $album = query("SELECT * FROM tb_album");
         <div class="row">
             <?php require_once "../sidebar/sidebar.php" ?>
 
-            <div class="col-md-10 col-lg-10">
-                <h2>Daftar Album</h2>
+            <div class="col-md-10 col-lg-10 mt-4">
+                <h3 class="text-center mb-3">Daftar Album</h3>
                 <table class="table table-bordered table-striped">
                     <thead class="thead-dark">
                         <tr>
-                            <th>No</th>
-                            <th>Hapus</th>
+                            <th class="text-center">No</th>
+                            <th class="text-center">Hapus</th>
                             <th>Nama Album</th>
-                            <th>Galeri</th>
+                            <th class="text-center">Galeri</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $i = 1 ?>
                         <?php foreach ($album as $row): ?>
                             <tr>
-                                <td>
+                                <td class="text-center">
                                     <?= $i ?>
                                 </td>
-                                <td><button type="button" class="btn btn-danger"><a
+                                <td class="text-center"><button type="button" class="btn btn-danger"><a
                                             href="crud/hapus.php?id_album=<?= $row['id_album'] ?>">Hapus</a></button>
                                     <button type="button" class="btn btn-primary"><a
                                             href="crud/ubah.php?id_album=<?= $row['id_album'] ?>">Ubah</a></button>
@@ -89,14 +89,20 @@ $album = query("SELECT * FROM tb_album");
                                 <td>
                                     <?= $row['album'] ?>
                                 </td>
-                                <td><a href="../galeri/index.php?id_album=<?= $row['id_album'] ?>">Lihat Galeri</a></td>
+                                <td class="text-center"><a href="../galeri/index.php?id_album=<?= $row['id_album'] ?>">Lihat Galeri</a></td>
                             </tr>
                             <?php $i++ ?>
                         <?php endforeach ?>
                     </tbody>
                 </table>
                 <br>
-                <button type="button" class="btn btn-primary"><a href="crud/tambah.php">Tambah Album</a></button>
+                <div class="row">
+                    <div class="col text-center">
+                        <button type="button" class="btn btn-primary">
+                            <a href="crud/tambah.php">Tambah Album</a>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
