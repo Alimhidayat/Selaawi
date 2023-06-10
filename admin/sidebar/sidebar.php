@@ -7,7 +7,7 @@ $active = $uriSegments[3];
 // exit;
 
 ?>
-<nav class="col-md-2 col-lg-2 bg-dark">
+<nav class="col-md-2 col-lg-2 bg-dark pb-5">
     <div class="sidebar-sticky">
         <center>
             <img class="logo mb-4" src="<?=$baseurlLogo;?>" alt="Logo">
@@ -44,7 +44,7 @@ $active = $uriSegments[3];
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?=$baseurl;?>login/logout.php">
+                <a class="nav-link logout" href="<?=$baseurl;?>login/logout.php">
                     <i class="bi bi-box-arrow-right"></i> Logout
                 </a>
             </li>

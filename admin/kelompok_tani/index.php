@@ -1,8 +1,8 @@
-<?php 
+<?php
 session_start();
 if (!isset($_SESSION['login'])) {
-	header("Location:../login/login.php");
-	exit;
+    header("Location:../login/login.php");
+    exit;
 }
 require 'function/functions.php';
 
@@ -10,7 +10,7 @@ require 'function/functions.php';
 $kel_tani = query("SELECT * FROM tb_keltani ORDER BY nama_kel ASC");
 
 if (isset($_POST['cari'])) {
-	$kel_tani = cari($_POST['keyword']);
+    $kel_tani = cari($_POST['keyword']);
 }
 
 ?>
@@ -38,17 +38,9 @@ if (isset($_POST['cari'])) {
             color: white;
         }
 
-        .sidebar-sticky {
-            margin-top: 20px;
-        }
-
-        .nav-link.active {
-            background-color: rgba(0, 0, 0, 0.15) !important;
-        }
-
-        .nav-link {
-            padding: 10px 16px;
-        }
+        <?php
+        require_once "../sidebar/sidebar.css";
+        ?>
 
         .logo {
             margin-top: 20px;
@@ -68,7 +60,7 @@ if (isset($_POST['cari'])) {
 <body>
     <div class="container-fluid mb-5">
         <div class="row">
-            <?php require_once "../sidebar/sidebar.php";?>
+            <?php require_once "../sidebar/sidebar.php"; ?>
             <div class="col-md-10 col-lg-10">
                 <div class="container">
                     <h2 class="text-center mt-5 mb-5">Kelompok Tani Komoditi Kecamatan Selaawi</h2>
@@ -91,27 +83,33 @@ if (isset($_POST['cari'])) {
                             </thead>
 
                             <tbody>
-                                <?php $i = 1;?>
-                                <?php foreach ($kel_tani as $row) :?>
-                                <tr>
-                                    <th scope="row" class="text-center"><?= $i ?></th>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-danger">
-                                            <a href="crud/hapus.php?id_kel=<?= $row['id_kel'] ?>&nama_kel=<?= $row['nama_kel'] ?>"
-                                                onclick="return confirm('Yakin akan hapus?')">Hapus</a>
-                                        </button>
-                                        <button type="button" class="btn btn-primary">
-                                            <a href="crud/ubah.php?id_kel=<?= $row['id_kel'] ?>"
-                                                onclick="return confirm('Yakin akan mengubah?')">Ubah</a>
-                                        </button>
-                                    </td>
-                                    <td><?= $row['nama_kel'] ?></td>
-                                    <td class="text-center"><?= $row['no_wa'] ?></td>
-                                    <td class="text-center"><button type="button" class="btn btn-success"><a
-                                                href="https://wa.me/+<?= $row['no_wa'] ?>">Chat</a></button></td>
-                                </tr>
-                                <?php $i++;?>
-                                <?php endforeach;?>
+                                <?php $i = 1; ?>
+                                <?php foreach ($kel_tani as $row): ?>
+                                    <tr>
+                                        <th scope="row" class="text-center">
+                                            <?= $i ?>
+                                        </th>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn-danger">
+                                                <a href="crud/hapus.php?id_kel=<?= $row['id_kel'] ?>&nama_kel=<?= $row['nama_kel'] ?>"
+                                                    onclick="return confirm('Yakin akan hapus?')">Hapus</a>
+                                            </button>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="crud/ubah.php?id_kel=<?= $row['id_kel'] ?>"
+                                                    onclick="return confirm('Yakin akan mengubah?')">Ubah</a>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <?= $row['nama_kel'] ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <?= $row['no_wa'] ?>
+                                        </td>
+                                        <td class="text-center"><button type="button" class="btn btn-success"><a
+                                                    href="https://wa.me/+<?= $row['no_wa'] ?>">Chat</a></button></td>
+                                    </tr>
+                                    <?php $i++; ?>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
@@ -124,11 +122,11 @@ if (isset($_POST['cari'])) {
                 </div>
 
             </div>
-			
+
         </div>
 
     </div>
-	<footer>
+    <footer>
         <p>&copy; Copyright 2023 BPP Selaawi Kabupaten Garut</p>
     </footer>
 

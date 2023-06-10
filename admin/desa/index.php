@@ -36,17 +36,9 @@ if (isset($_POST['cari'])) {
 			text-decoration: none;
 			color: white;
 		}
-		.sidebar-sticky {
-			margin-top: 20px;
-		}
-
-		.nav-link.active {
-			background-color: rgba(0, 0, 0, 0.15) !important;
-		}
-
-		.nav-link {
-			padding: 10px 16px;
-		}
+		<?php
+        require_once "../sidebar/sidebar.css";
+        ?>
 
 		.logo {
 			margin-top: 20px;

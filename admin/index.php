@@ -46,33 +46,17 @@ if (isset($_POST['cari'])) {
       text-decoration: none;
     }
 
-    button {
-      min-width: 100px;
-    }
-
-    .sidebar-sticky {
-      margin-top: 20px;
-    }
-    .nav-link {
-      padding: 10px 16px;
-    }
-    
-    .nav-link.active {
-      background-color: rgba(0, 0, 0, 0.15) !important;
-    }
-    .nav-link.logout {
-      background-color: rgb(255 0 0 / 58%) !important;
-    }
-
-    .nav-link.logout:hover {
-      background-color: rgb(255 0 0 / 68%) !important;
-    }
-
+    <?php
+    require_once "sidebar/sidebar.css";
+    ?>
     .logo {
 		margin-top: 20px;
       height: 100px;
     }
 
+    button {
+      min-width: 100px;
+    }
     footer {
       background-color: #f8f9fa;
       padding: 20px 0;
