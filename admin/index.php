@@ -53,13 +53,19 @@ if (isset($_POST['cari'])) {
     .sidebar-sticky {
       margin-top: 20px;
     }
-
+    .nav-link {
+      padding: 10px 16px;
+    }
+    
     .nav-link.active {
       background-color: rgba(0, 0, 0, 0.15) !important;
     }
+    .nav-link.logout {
+      background-color: rgb(255 0 0 / 58%) !important;
+    }
 
-    .nav-link {
-      padding: 10px 16px;
+    .nav-link.logout:hover {
+      background-color: rgb(255 0 0 / 68%) !important;
     }
 
     .logo {
