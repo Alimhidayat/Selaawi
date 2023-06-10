@@ -74,7 +74,7 @@ $informasi = query("SELECT * FROM tb_informasi WHERE id_inf = $id_inf")[0];
             <nav class="main-menu">
                 <div class="container">
                     <div class="logo-box">
-                        <a href="index.html" aria-label="logo image"><img src="../assets-selawi/LogoKabupatenGarut.jpg" width="100" alt=""></a>
+                        <a href="../index.php" aria-label="logo image"><img src="../assets-selawi/LogoKabupatenGarut.jpg" width="100" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
                     <?php
@@ -132,7 +132,7 @@ $informasi = query("SELECT * FROM tb_informasi WHERE id_inf = $id_inf")[0];
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-widget">
                             <div class="logo-flutter" style="text-align: center;">
-                                <a href="../index.html" class="footer-widget__Logo" style="text-align: center;">
+                                <a href="../index.php" class="footer-widget__Logo" style="text-align: center;">
                                     <img src="../assets-selawi/LogoBPPSelaawi.png" width="153" alt="">
                                 </a>
                                 <center>
@@ -156,14 +156,13 @@ $informasi = query("SELECT * FROM tb_informasi WHERE id_inf = $id_inf")[0];
                                     <!-- <img src="assets/images/resources/footer-post-1.png" alt=""> -->
                                     <div class="footer-widget__post-content">
                                         <span>Dec 4, 2022</span>
-                                        <h4><a href="../blog-details.html">Macam-Macam Teknik Menanam Padi</a></h4>
+                                        <h4><a href="../index.php">Macam-Macam Teknik Menanam Padi</a></h4>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                                 <li>
-                                    <img src="../assets/images/resources/footer-post-2.png" alt="">
                                     <div class="footer-widget__post-content">
                                         <span>Nov 16, 2020</span>
-                                        <h4><a href="../blog-details.html">How to grow vagetables in the forms</a></h4>
+                                        <h4><a href="../dimana.php">Dimanakah Selaawi??</a></h4>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                             </ul><!-- /.list-unstyled footer-widget__post -->

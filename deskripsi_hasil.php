@@ -114,24 +114,24 @@ $hasil_tani = query("SELECT tb_hasiltani.*, IFNULL(SUM(tb_detil_hasiltani.jml_ta
         <nav class="main-menu">
             <div class="container">
                 <div class="logo-box">
-                    <a href="index.html" aria-label="logo image"><img src="assets-selawi/LogoKabupatenGarut.jpg" width="100" alt=""></a>
+                    <a href="index.php" aria-label="logo image"><img src="assets-selawi/LogoKabupatenGarut.jpg" width="100" alt=""></a>
                     <span class="fa fa-bars mobile-nav__toggler"></span>
                 </div><!-- /.logo-box -->
                 <ul class="main-menu__list">
                     <li>
-                        <a href="index.html">Beranda</a>
+                        <a href="index.php">Beranda</a>
                     </li>
                     <li>
-                        <a href="about.html">Tentang Kami</a>
+                        <a href="about.php">Tentang Kami</a>
                     </li>
                     <li>
-                        <a href="projects.html">Program</a>
+                        <a href="projects.php">Program</a>
                     </li>
                     <li>
-                        <a href="blog.html">Informasi</a>
+                        <a href="blog.php">Informasi</a>
                     </li>
                     <li>
-                        <a href="gallery.html">Galeri</a>
+                        <a href="gallery.php">Galeri</a>
                     </li>
 
                     <li>
@@ -139,7 +139,7 @@ $hasil_tani = query("SELECT tb_hasiltani.*, IFNULL(SUM(tb_detil_hasiltani.jml_ta
                     </li>
 
                     <li>
-                        <a href="contact.html">Hubungi Kami</a>
+                        <a href="contact.php">Hubungi Kami</a>
                     </li>
                 </ul>
             </div><!-- /.container -->
@@ -155,7 +155,7 @@ $hasil_tani = query("SELECT tb_hasiltani.*, IFNULL(SUM(tb_detil_hasiltani.jml_ta
         <!-- /.page-header__bg -->
         <div class="container">
             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.php">Beranda</a></li>
                 <li>/</li>
                 <li><span>Hasil Tani</span></li>
             </ul><!-- /.thm-breadcrumb list-unstyled -->
@@ -256,7 +256,7 @@ $hasil_tani = query("SELECT tb_hasiltani.*, IFNULL(SUM(tb_detil_hasiltani.jml_ta
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-widget">
                             <div class="logo-flutter" style="text-align: center;">
-                                <a href="index.html" class="footer-widget__Logo" style="text-align: center;">
+                                <a href="index.php" class="footer-widget__Logo" style="text-align: center;">
                                     <img src="assets-selawi/LogoBPPSelaawi.png" width="153" alt="">
                                 </a>
                                 <center>
@@ -280,14 +280,13 @@ $hasil_tani = query("SELECT tb_hasiltani.*, IFNULL(SUM(tb_detil_hasiltani.jml_ta
                                     <!-- <img src="assets/images/resources/footer-post-1.png" alt=""> -->
                                     <div class="footer-widget__post-content">
                                         <span>Dec 4, 2022</span>
-                                        <h4><a href="blog-details.html">Macam-Macam Teknik Menanam Padi</a></h4>
+                                        <h4><a href="index.php">Macam-Macam Teknik Menanam Padi</a></h4>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                                 <li>
-                                    <img src="assets/images/resources/footer-post-2.png" alt="">
                                     <div class="footer-widget__post-content">
                                         <span>Nov 16, 2020</span>
-                                        <h4><a href="blog-details.html">How to grow vagetables in the forms</a></h4>
+                                        <h4><a href="dimana.php">Dimana Selaawi??</a></h4>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                             </ul><!-- /.list-unstyled footer-widget__post -->
@@ -334,7 +333,7 @@ $hasil_tani = query("SELECT tb_hasiltani.*, IFNULL(SUM(tb_detil_hasiltani.jml_ta
 
             <div class="logo-box">
                 <center>
-                    <a href="index.html" aria-label="logo image"><img src="assets-selawi/LogoKabupatenGarutBRU.png" width="90" alt="" /></a>
+                    <a href="index.php" aria-label="logo image"><img src="assets-selawi/LogoKabupatenGarutBRU.png" width="90" alt="" /></a>
                 </center>
             </div>
             <!-- /.logo-box -->

@@ -4,16 +4,9 @@ $id_album = $_GET['id_album'];
 
 require "function/functions.php";
 
-$jumlahDataPerHalaman = 6;
-$jumlahData = count(query("SELECT * FROM tb_galeri WHERE id_album = $id_album"));
-
-$jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
-$halamanAktif = (isset($_GET['halaman'])) ? $_GET['halaman'] : 1;
-$awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
 // var_dump($awalData);
 // 
-$galeri = query("SELECT * FROM tb_galeri WHERE id_album = $id_album ORDER BY id_gam DESC 
-                  LIMIT $awalData, $jumlahDataPerHalaman");
+$galeri = query("SELECT * FROM tb_galeri WHERE id_album = $id_album ORDER BY id_gam DESC ");
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +50,6 @@ $galeri = query("SELECT * FROM tb_galeri WHERE id_album = $id_album ORDER BY id_
         </div>
       <?php endforeach; ?>
     </div>
-
     <div class="row">
       <div class="col text-center">
         <button class="btn btn-primary"><a href="crud/tambah.php?id_album=<?= $id_album ?>" style="color: white;">Tambah
