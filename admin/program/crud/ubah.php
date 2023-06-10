@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['login'])) {
+	header("Location:../../login/login.php");
+	exit;
+}
+
 require "../function/functions.php";
 
 $id_prog = $_GET['id_prog'];

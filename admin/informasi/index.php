@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location:../login/login.php");
+    exit;
+}
 require "function/functions.php";
 
 $informasi = query("SELECT * FROM tb_informasi ORDER BY id_inf DESC");

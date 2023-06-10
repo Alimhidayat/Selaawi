@@ -1,4 +1,10 @@
 <?php 
+session_start();
+if (!isset($_SESSION['login'])) {
+	header("Location:../../login/login.php");
+	exit;
+}
+
 $id_album = $_GET['id_album'];
 var_dump($id_album);    
 

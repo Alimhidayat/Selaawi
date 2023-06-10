@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location:../login/login.php");
+    exit;
+}
 require '../function/functions_keltani.php';
 // id hasil ini nanti bakalan dimasukan kedalam tabel tb_detil_hasiltani
 // tapi kan yang bikin saya bingung nanti kan harus di 

@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['login'])) {
+	header("Location:../../login/login.php");
+	exit;
+}
+
 require "../function/functions.php";
 $id_album = $_GET['id_album'];
 $album = query("SELECT * FROM tb_album WHERE id_album = $id_album")[0];

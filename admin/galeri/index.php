@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location:../login/login.php");
+    exit;
+}
 // Mengambil data dari tb_album
 $id_album = $_GET['id_album'];
 
